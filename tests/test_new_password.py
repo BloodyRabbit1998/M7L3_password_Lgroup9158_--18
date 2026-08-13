@@ -21,8 +21,9 @@ def test_password_length():
     password = generate_password(100)
     assert len(password) == 100
 
-def test_password_length():
+def test_password_lengt():
+    password = generate_password(100)
+    password2 = generate_password(100)
+    print("Oшибка такой пароль уже существует")
     if password == password2:
-        password = generate_password(100)
-        password2 = generate_password(100)
-        print'Oшибка такой пароль уже существует'
+        assert len 
