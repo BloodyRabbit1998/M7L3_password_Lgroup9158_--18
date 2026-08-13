@@ -1,4 +1,5 @@
 import string
+import pytest
 from password.new_password import generate_password
 
 def test_password_characters():
@@ -13,5 +14,15 @@ def test_password_characters():
 Если сможешь написать больше, то будет круто!
 
 Тест, что длина пароля соответствует заданной
+
 Тест, что два сгенерированных подряд пароля различаются
 """
+def test_password_length():
+    password = generate_password(100)
+    assert len(password) == 100
+
+def test_password_length():
+    if password == password2:
+        password = generate_password(100)
+        password2 = generate_password(100)
+        print'Oшибка такой пароль уже существует'
